@@ -67,7 +67,7 @@
     <div id='li'>
         <li v-for='value in list'>{{value}}</li>
         <br>
-        <li v-for='(key,value) in objData'>{{key}}===={{value}}</li>
+        <li v-for='(value,key,index) in objData'>{{index}}===={{key}}===={{value}}</li>
     </div>
 
 
