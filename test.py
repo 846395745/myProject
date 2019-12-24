@@ -1,8 +1,5 @@
-sfsfdsfd
-hello
-name
+a = 123
 
-hello
-hello
+print(a)
 
-print(‘hello’)
+
