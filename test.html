@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+    <script src="vue.js"></script>
+    <script>
+        window.onload = function () {
+            // 创建一个Vue对象
+            var vm = new Vue({
+                el: '#box',
+                data: {
+                    content: 'Vue的基本使用'
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body>
+
+    <div id='box'>
+        {{content}}
+    </div>
+
+
+</body>
+</html>
