@@ -11,8 +11,7 @@
                 el: '#box',
                 data: {
                     content: 'Vue的基本使用',
-                    name:'张三',
-                    email:'846395475@qq.com',
+
                 }
             });
             var vm1 = new Vue({
@@ -20,9 +19,28 @@
                 data: {
                     name:'张三',
                     email:'846395475@qq.com',
-                    url:'http://www.baidu.com'
+                    url:'http://www.baidu.com',
+
+                },
+                methods:{
+                    fnAddClick:function f() {
+                        alert(123)
+
                 }
+            }
             });
+            var vm2 = new Vue({
+                el: '#li',
+                data: {
+                    list:['a','b','c','d'],
+                    objData:{
+                        name:'winnie',
+                        age:19
+                    }
+
+            }
+            });
+
         }
     </script>
 
@@ -33,13 +51,24 @@
     <div id='box'>
         {{content}}
     </div>
+    <hr>
     <h1 id = 'h1'>
         {{name}}<br>
         {{email}}<br>
         <a v-bind:href="url">百度</a><br>
-<!--       v-bind：直接简直为冒号即可-->
+<!--       v-bind：直接简写为冒号即可-->
         <a :href="url">度娘</a>
+        <hr>
+        <button v-on:click="fnAddClick">按钮一</button>
+
+        <button @click="fnAddClick">按钮二</button>
     </h1>
+    <hr>
+    <div id='li'>
+        <li v-for='value in list'>{{value}}</li>
+        <br>
+        <li v-for='(key,value) in objData'>{{key}}===={{value}}</li>
+    </div>
 
 
 
