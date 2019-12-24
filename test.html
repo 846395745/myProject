@@ -20,6 +20,7 @@
                 data: {
                     name:'张三',
                     email:'846395475@qq.com',
+                    url:'http://www.baidu.com'
                 }
             });
         }
@@ -34,7 +35,10 @@
     </div>
     <h1 id = 'h1'>
         {{name}}<br>
-        {{email}}
+        {{email}}<br>
+        <a v-bind:href="url">百度</a><br>
+<!--       v-bind：直接简直为冒号即可-->
+        <a :href="url">度娘</a>
     </h1>
 
 
