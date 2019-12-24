@@ -10,7 +10,16 @@
             var vm = new Vue({
                 el: '#box',
                 data: {
-                    content: 'Vue的基本使用'
+                    content: 'Vue的基本使用',
+                    name:'张三',
+                    email:'846395475@qq.com',
+                }
+            });
+            var vm1 = new Vue({
+                el: '#h1',
+                data: {
+                    name:'张三',
+                    email:'846395475@qq.com',
                 }
             });
         }
@@ -23,6 +32,11 @@
     <div id='box'>
         {{content}}
     </div>
+    <h1 id = 'h1'>
+        {{name}}<br>
+        {{email}}
+    </h1>
+
 
 
 </body>
